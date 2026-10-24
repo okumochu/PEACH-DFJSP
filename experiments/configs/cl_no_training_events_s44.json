@@ -1,0 +1,738 @@
+{
+  "config": {
+    "actor_channels": [
+      96,
+      128,
+      64,
+      32,
+      1
+    ],
+    "checkpoint_every": 1,
+    "common_params": {
+      "device": "cuda:0",
+      "model_name": "hgt_50X10_dynamic"
+    },
+    "critic_channels": [
+      96,
+      128,
+      64,
+      32,
+      1
+    ],
+    "curriculum_learning": {
+      "ddt_min_substage_ratio": 0.5,
+      "ddt_stage_ratio": 0.6,
+      "dynamic_event_params": {
+        "machines_per_breakdown": [
+          3,
+          5
+        ],
+        "mtbf": [
+          90,
+          120
+        ],
+        "new_job_due_date_tightness": [
+          0.3,
+          0.8
+        ],
+        "new_job_lambda_inv": [
+          90,
+          120
+        ],
+        "new_job_weight": [
+          5,
+          5
+        ],
+        "new_jobs_per_arrival": [
+          3,
+          4
+        ],
+        "num_machine_breakdown_waves": [
+          2,
+          2
+        ],
+        "num_new_job_arrival_waves": [
+          2,
+          2
+        ],
+        "num_priority_change_waves": [
+          0,
+          0
+        ],
+        "repair_duration": [
+          120,
+          120
+        ]
+      },
+      "enabled": false,
+      "events_enabled": true,
+      "initial_due_date_tightness": [
+        1.0,
+        2.5
+      ],
+      "resolved_dynamic_event_params": {
+        "machines_per_breakdown": [
+          3,
+          5
+        ],
+        "machines_per_breakdown_max": 5,
+        "machines_per_breakdown_min": 3,
+        "mtbf": [
+          90.0,
+          120.0
+        ],
+        "new_job_due_date_tightness": [
+          0.3,
+          0.8
+        ],
+        "new_job_lambda_inv": [
+          90.0,
+          120.0
+        ],
+        "new_job_weight": [
+          5,
+          5
+        ],
+        "new_jobs_per_arrival": [
+          8,
+          10
+        ],
+        "new_jobs_per_arrival_max": 10,
+        "new_jobs_per_arrival_min": 8,
+        "num_machine_breakdown_waves": [
+          2,
+          2
+        ],
+        "num_machine_breakdowns": [
+          2,
+          2
+        ],
+        "num_new_job_arrival_waves": [
+          2,
+          2
+        ],
+        "num_new_job_arrivals": [
+          2,
+          2
+        ],
+        "num_priority_change_waves": [
+          0,
+          0
+        ],
+        "num_priority_changes": [
+          0,
+          0
+        ],
+        "priority_change_interval": [
+          25.0,
+          25.0
+        ],
+        "priority_jobs_per_change": [
+          3,
+          3
+        ],
+        "priority_jobs_per_change_max": 3,
+        "priority_jobs_per_change_min": 3,
+        "priority_new_weight": [
+          5,
+          5
+        ],
+        "repair_duration": [
+          120.0,
+          120.0
+        ]
+      }
+    },
+    "device": "cuda:0",
+    "dp_lb_diff": {
+      "enabled": true
+    },
+    "dropout": 0.1,
+    "dynamic_event_params": {
+      "machines_per_breakdown": [
+        3,
+        5
+      ],
+      "machines_per_breakdown_max": 5,
+      "machines_per_breakdown_min": 3,
+      "mtbf": [
+        90.0,
+        120.0
+      ],
+      "new_job_due_date_tightness": [
+        0.3,
+        0.8
+      ],
+      "new_job_lambda_inv": [
+        90.0,
+        120.0
+      ],
+      "new_job_weight": [
+        5,
+        5
+      ],
+      "new_jobs_per_arrival": [
+        8,
+        10
+      ],
+      "new_jobs_per_arrival_max": 10,
+      "new_jobs_per_arrival_min": 8,
+      "num_machine_breakdown_waves": [
+        2,
+        2
+      ],
+      "num_machine_breakdowns": [
+        2,
+        2
+      ],
+      "num_new_job_arrival_waves": [
+        2,
+        2
+      ],
+      "num_new_job_arrivals": [
+        2,
+        2
+      ],
+      "num_priority_change_waves": [
+        0,
+        0
+      ],
+      "num_priority_changes": [
+        0,
+        0
+      ],
+      "priority_change_interval": [
+        25.0,
+        25.0
+      ],
+      "priority_jobs_per_change": [
+        3,
+        3
+      ],
+      "priority_jobs_per_change_max": 3,
+      "priority_jobs_per_change_min": 3,
+      "priority_new_weight": [
+        5,
+        5
+      ],
+      "repair_duration": [
+        120.0,
+        120.0
+      ]
+    },
+    "early_stop_patience": 4,
+    "entropy_coef": 0.0,
+    "eps_clip": 0.2,
+    "gae_lambda": 0.98,
+    "gamma": 1.0,
+    "hidden_dim": 16,
+    "high": 50,
+    "job_feature_dim": 8,
+    "k_epochs": 4,
+    "low": 1,
+    "lr": 0.0003,
+    "machine_feature_dim": 7,
+    "machine_per_operation_max": 10,
+    "machine_per_operation_min": 1,
+    "max_grad_norm": 1.0,
+    "max_updates": 20000,
+    "micro_batch_size": 128,
+    "minibatch_size": 256,
+    "mlp_hidden_dims": [
+      128,
+      64,
+      32
+    ],
+    "model_name": "hgt_50X10_dynamic",
+    "model_suffix": "",
+    "n_j": 50,
+    "n_m": 10,
+    "num_envs": 20,
+    "num_heads": 1,
+    "num_hgt_layers": 3,
+    "objective_weights": {
+      "makespan_weight": 0.5,
+      "twt_weight": 0.5
+    },
+    "op_feature_dim": 9,
+    "operation_per_job_max": 10,
+    "operation_per_job_min": 1,
+    "ploss_coef": 1.0,
+    "popart_beta": 0.1,
+    "problem_params": {
+      "due_date_tightness": [
+        0.5,
+        1.5
+      ],
+      "due_date_tightness_max": 1.5,
+      "due_date_tightness_min": 0.5,
+      "job_num": 50,
+      "machine_num": 10,
+      "machine_per_operation": [
+        1,
+        10
+      ],
+      "machine_per_operation_max": 10,
+      "machine_per_operation_min": 1,
+      "machines_per_breakdown": [
+        3,
+        5
+      ],
+      "machines_per_breakdown_max": 5,
+      "machines_per_breakdown_min": 3,
+      "mtbf": [
+        90.0,
+        120.0
+      ],
+      "mtbf_max": 475.0,
+      "mtbf_min": 475.0,
+      "new_job_due_date_tightness": [
+        0.3,
+        0.8
+      ],
+      "new_job_due_date_tightness_max": 1.5,
+      "new_job_due_date_tightness_min": 0.5,
+      "new_job_lambda_inv": [
+        90.0,
+        120.0
+      ],
+      "new_job_lambda_inv_max": 100.0,
+      "new_job_lambda_inv_min": 25.0,
+      "new_job_weight": [
+        5,
+        5
+      ],
+      "new_job_weight_max": 5,
+      "new_job_weight_min": 1,
+      "new_jobs_per_arrival": [
+        8,
+        10
+      ],
+      "new_jobs_per_arrival_max": 10,
+      "new_jobs_per_arrival_min": 8,
+      "num_machine_breakdown_waves": [
+        2,
+        2
+      ],
+      "num_machine_breakdown_waves_max": 0,
+      "num_machine_breakdown_waves_min": 0,
+      "num_machine_breakdowns": [
+        2,
+        2
+      ],
+      "num_machine_breakdowns_max": 0,
+      "num_machine_breakdowns_min": 0,
+      "num_new_job_arrival_waves": [
+        2,
+        2
+      ],
+      "num_new_job_arrival_waves_max": 0,
+      "num_new_job_arrival_waves_min": 0,
+      "num_new_job_arrivals": [
+        2,
+        2
+      ],
+      "num_new_job_arrivals_max": 0,
+      "num_new_job_arrivals_min": 0,
+      "num_priority_change_waves": [
+        0,
+        0
+      ],
+      "num_priority_change_waves_max": 0,
+      "num_priority_change_waves_min": 0,
+      "num_priority_changes": [
+        0,
+        0
+      ],
+      "num_priority_changes_max": 0,
+      "num_priority_changes_min": 0,
+      "operation_per_job": [
+        1,
+        10
+      ],
+      "operation_per_job_max": 10,
+      "operation_per_job_min": 1,
+      "priority_change_interval": [
+        25.0,
+        25.0
+      ],
+      "priority_change_interval_max": 25.0,
+      "priority_change_interval_min": 25.0,
+      "priority_jobs_per_change": [
+        3,
+        3
+      ],
+      "priority_jobs_per_change_max": 3,
+      "priority_jobs_per_change_min": 3,
+      "priority_new_weight": [
+        5,
+        5
+      ],
+      "priority_new_weight_max": 5,
+      "priority_new_weight_min": 5,
+      "process_time": [
+        1,
+        50
+      ],
+      "process_time_max": 50,
+      "process_time_min": 1,
+      "repair_duration": [
+        120.0,
+        120.0
+      ],
+      "repair_duration_max": 25.0,
+      "repair_duration_min": 25.0,
+      "urgency_weight": [
+        1,
+        5
+      ],
+      "urgency_weight_max": 5,
+      "urgency_weight_min": 1
+    },
+    "pt_feature_dim": 2,
+    "reproducibility": {
+      "cublas_workspace_config": null,
+      "cuda_available": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "numpy_seed": 44,
+      "python_random_seed": 44,
+      "pythonhashseed": "44",
+      "seed": 44,
+      "torch_seed": 44,
+      "torch_version": "2.7.1+cu126"
+    },
+    "reset_env_episode": 1,
+    "scale_curriculum": {
+      "cv_tol": 0.8,
+      "descend_patience": null,
+      "div_factor": 5.0,
+      "div_patience": 10,
+      "enabled": true,
+      "ev_threshold": 0.6,
+      "final_hold_updates": null,
+      "max_stage_updates": 100000,
+      "min_stage_updates": 20,
+      "plateau_tol": 0.5,
+      "settle_updates": null,
+      "stages": [
+        [
+          10,
+          5,
+          128
+        ],
+        [
+          14,
+          6,
+          128
+        ],
+        [
+          19,
+          7,
+          128
+        ],
+        [
+          26,
+          8,
+          128
+        ],
+        [
+          36,
+          9,
+          128
+        ],
+        [
+          50,
+          10,
+          128
+        ]
+      ],
+      "window": 10
+    },
+    "scale_event_magnitudes_to_size": true,
+    "seed": 44,
+    "static_params": {
+      "due_date_tightness": [
+        0.5,
+        1.5
+      ],
+      "due_date_tightness_max": 1.5,
+      "due_date_tightness_min": 0.5,
+      "job_num": 50,
+      "machine_num": 10,
+      "machine_per_operation": [
+        1,
+        10
+      ],
+      "machine_per_operation_max": 10,
+      "machine_per_operation_min": 1,
+      "machines_per_breakdown": [
+        1,
+        1
+      ],
+      "machines_per_breakdown_max": 1,
+      "machines_per_breakdown_min": 1,
+      "mtbf": [
+        475.0,
+        475.0
+      ],
+      "mtbf_max": 475.0,
+      "mtbf_min": 475.0,
+      "new_job_due_date_tightness": [
+        0.5,
+        1.5
+      ],
+      "new_job_due_date_tightness_max": 1.5,
+      "new_job_due_date_tightness_min": 0.5,
+      "new_job_lambda_inv": [
+        25.0,
+        100.0
+      ],
+      "new_job_lambda_inv_max": 100.0,
+      "new_job_lambda_inv_min": 25.0,
+      "new_job_weight": [
+        1,
+        5
+      ],
+      "new_job_weight_max": 5,
+      "new_job_weight_min": 1,
+      "new_jobs_per_arrival": [
+        1,
+        1
+      ],
+      "new_jobs_per_arrival_max": 1,
+      "new_jobs_per_arrival_min": 1,
+      "num_machine_breakdown_waves": [
+        0,
+        0
+      ],
+      "num_machine_breakdown_waves_max": 0,
+      "num_machine_breakdown_waves_min": 0,
+      "num_machine_breakdowns": [
+        0,
+        0
+      ],
+      "num_machine_breakdowns_max": 0,
+      "num_machine_breakdowns_min": 0,
+      "num_new_job_arrival_waves": [
+        0,
+        0
+      ],
+      "num_new_job_arrival_waves_max": 0,
+      "num_new_job_arrival_waves_min": 0,
+      "num_new_job_arrivals": [
+        0,
+        0
+      ],
+      "num_new_job_arrivals_max": 0,
+      "num_new_job_arrivals_min": 0,
+      "num_priority_change_waves": [
+        0,
+        0
+      ],
+      "num_priority_change_waves_max": 0,
+      "num_priority_change_waves_min": 0,
+      "num_priority_changes": [
+        0,
+        0
+      ],
+      "num_priority_changes_max": 0,
+      "num_priority_changes_min": 0,
+      "operation_per_job": [
+        1,
+        10
+      ],
+      "operation_per_job_max": 10,
+      "operation_per_job_min": 1,
+      "priority_change_interval": [
+        25.0,
+        25.0
+      ],
+      "priority_change_interval_max": 25.0,
+      "priority_change_interval_min": 25.0,
+      "priority_jobs_per_change": [
+        1,
+        1
+      ],
+      "priority_jobs_per_change_max": 1,
+      "priority_jobs_per_change_min": 1,
+      "priority_new_weight": [
+        5,
+        5
+      ],
+      "priority_new_weight_max": 5,
+      "priority_new_weight_min": 5,
+      "process_time": [
+        1,
+        50
+      ],
+      "process_time_max": 50,
+      "process_time_min": 1,
+      "repair_duration": [
+        25.0,
+        25.0
+      ],
+      "repair_duration_max": 25.0,
+      "repair_duration_min": 25.0,
+      "urgency_weight": [
+        1,
+        5
+      ],
+      "urgency_weight_max": 5,
+      "urgency_weight_min": 1
+    },
+    "stopping_rule": "readiness_patience",
+    "test_data": [
+      "50x10"
+    ],
+    "test_method": [],
+    "test_model": [
+      "50x10"
+    ],
+    "train_size": "50x10",
+    "training_events": false,
+    "training_settings": {
+      "device": "cuda:0",
+      "early_stopping_patience": 4,
+      "hidden_dim": 16,
+      "initial_size": "10x5",
+      "lr": 0.0003,
+      "maximum_updates": 20000,
+      "micro_batch_size": 128,
+      "mlp_hidden_dims": [
+        128,
+        64,
+        32
+      ],
+      "num_envs": 20,
+      "num_heads": 1,
+      "num_layers": 3,
+      "scale_cl": true,
+      "scale_growth_factor": 1.7,
+      "seed": 44,
+      "selection": "best_validation_objective",
+      "stage_explained_variance": 0.6,
+      "stage_maximum_updates": 100000,
+      "stage_minimum_updates": 20,
+      "stopping_rule": "readiness_patience",
+      "training_events": false,
+      "training_size": "50x10",
+      "validation_interval": 20,
+      "value_normalization": "popart"
+    },
+    "update_per_validate": 20,
+    "use_dynamic_event_features": true,
+    "use_popart": true,
+    "use_pt_nodes": true,
+    "validation_seed": 42,
+    "validation_set_size": 30,
+    "vloss_coef": 0.5
+  },
+  "hgt_hyperparams": {
+    "actor_channels": [
+      96,
+      128,
+      64,
+      32,
+      1
+    ],
+    "checkpoint_role": "validation_selected",
+    "checkpoint_update_index": 400,
+    "critic_channels": [
+      96,
+      128,
+      64,
+      32,
+      1
+    ],
+    "curriculum": {
+      "due_date_ramp": false,
+      "scale_demotions": null,
+      "scale_ladder": [
+        [
+          10,
+          5,
+          128
+        ],
+        [
+          14,
+          6,
+          128
+        ],
+        [
+          19,
+          7,
+          128
+        ],
+        [
+          26,
+          8,
+          128
+        ],
+        [
+          36,
+          9,
+          128
+        ],
+        [
+          50,
+          10,
+          128
+        ]
+      ],
+      "scale_outcome": null,
+      "scale_size_reached": "50x10",
+      "scale_stage_final": 5,
+      "scale_stage_reached": 5
+    },
+    "dp_lb_diff": {
+      "enabled": true,
+      "measure": "dp"
+    },
+    "dropout": 0.1,
+    "eps_clip": 0.2,
+    "gae_lambda": 0.98,
+    "gamma": 1.0,
+    "hidden_dim": 16,
+    "job_feature_dim": 8,
+    "k_epochs": 4,
+    "lr": 0.0003,
+    "machine_feature_dim": 7,
+    "max_grad_norm": 1.0,
+    "n_j": 50,
+    "n_m": 10,
+    "num_heads": 1,
+    "num_hgt_layers": 3,
+    "objective_weights": {
+      "makespan_weight": 0.5,
+      "twt_weight": 0.5
+    },
+    "op_feature_dim": 9,
+    "ploss_coef": 1.0,
+    "popart_beta": 0.1,
+    "pt_feature_dim": 2,
+    "reproducibility": {
+      "cublas_workspace_config": null,
+      "cuda_available": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "numpy_seed": 44,
+      "python_random_seed": 44,
+      "pythonhashseed": "44",
+      "seed": 44,
+      "torch_seed": 44,
+      "torch_version": "2.7.1+cu126"
+    },
+    "seed": 44,
+    "train_stage_n_j": 50,
+    "train_stage_n_m": 10,
+    "training_events": false,
+    "use_anchored_segments": true,
+    "use_dynamic_event_features": true,
+    "use_popart": true,
+    "use_pt_nodes": true,
+    "validation_fixture_sha256": "ee39dec63642750c040e11580e61282ba272f9989027228a0da8fb327e45bcb4",
+    "vloss_coef": 0.5
+  },
+  "id": "cl_no_training_events_s44"
+}

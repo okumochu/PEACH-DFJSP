@@ -1,0 +1,32 @@
+{
+  "schedules.py": {
+    "source": "tools/research/verify_retraining_evaluation.py",
+    "source_sha256": "e4fed2d187af846984d37fdaa4f2e6c9b12d4f831dd5c369bf456a64ba31d3af",
+    "changes": "Import namespace only; independent verification formulas unchanged."
+  },
+  "dynamic.py": {
+    "source": "tools/research/verify_retraining_dynamic.py",
+    "source_sha256": "ff29d3d96ef5511b4ac17479464ac3ed0d5af8f5685b336f676b7943e0427dc1",
+    "changes": "Import namespace only; independent verification formulas unchanged."
+  },
+  "variance.py": {
+    "source": "tools/research/verify_retraining_variance.py",
+    "source_sha256": "f605aedc87dffd8a8029c5b76b78e683653e4e8142aa5e149ea60fb2e6c11fda",
+    "changes": "Import namespace only; independent verification formulas unchanged."
+  },
+  "static_statistics": {
+    "source": "tools/research/render_static_n30_table.py",
+    "source_sha256": "12936551c84e0f3f3b4d31e4c0dd8ce4cca8b128a61a93aa16739b2d0d20af7a",
+    "changes": "Portable archive input; formulas reproduced from raw records without private imports."
+  },
+  "paired_statistics": {
+    "source": "evaluate_replication_static.py (frozen evaluation driver)",
+    "source_sha256": "b19d5647aec40335704f97226b2cd0829188bc6cb0bbd0307f8dece530bc3c86",
+    "changes": "Portable archive input; paired arithmetic gaps, sample SD and original tie tolerances retained."
+  },
+  "ablation_curves": {
+    "source": "paper/figures/scripts/build_ablation_training_curves_combined.py",
+    "source_sha256": "18078ea00a271c986b4b805659f9a3d10c283a6f6d98cc202c9be17e2def49e0",
+    "changes": "Portable archive input; formulas reproduced from raw records without private imports."
+  }
+}

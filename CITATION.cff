@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Metadata for the unpublished PEACH manuscript and implementation."
+type: software
+title: "Heterogeneous Graph With Admissible-Bound Reward Shaping for Reinforcement Learning in Dynamic Flexible Job Shop Scheduling"
+authors:
+  - family-names: Chu
+    given-names: Chia-Fan
+  - family-names: Lee
+    given-names: Chia-Yen
+version: "0.1.0"
+repository-code: "https://github.com/okumochu/PEACH-DFJSP"
+preferred-citation:
+  type: unpublished
+  title: "Heterogeneous Graph With Admissible-Bound Reward Shaping for Reinforcement Learning in Dynamic Flexible Job Shop Scheduling"
+  authors:
+    - family-names: Chu
+      given-names: Chia-Fan
+    - family-names: Lee
+      given-names: Chia-Yen

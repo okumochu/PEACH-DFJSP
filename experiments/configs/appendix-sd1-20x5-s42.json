@@ -1,0 +1,116 @@
+{
+  "config": {
+    "device": "cuda:0",
+    "dp_lb_diff": {
+      "enabled": true
+    },
+    "dropout": 0.1,
+    "entropy_coef": 0.0,
+    "eps_clip": 0.2,
+    "gae_lambda": 0.98,
+    "gamma": 1.0,
+    "generator_type": "SD1",
+    "hidden_dim": 128,
+    "job_feature_dim": 4,
+    "k_epochs": 4,
+    "lr": 3e-05,
+    "machine_feature_dim": 6,
+    "max_grad_norm": 1.0,
+    "max_updates": 4000,
+    "minibatch_size": 256,
+    "model_name": "hgt_so_SD1_20X5_static",
+    "n_j": 20,
+    "n_m": 5,
+    "num_envs": 20,
+    "num_heads": 1,
+    "num_hgt_layers": 4,
+    "op_feature_dim": 9,
+    "ploss_coef": 1.0,
+    "pt_feature_dim": 2,
+    "reproducibility": {
+      "cublas_workspace_config": null,
+      "cuda_available": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "numpy_seed": 42,
+      "python_random_seed": 42,
+      "pythonhashseed": "42",
+      "seed": 42,
+      "torch_seed": 42,
+      "torch_version": "2.7.1+cu118"
+    },
+    "reset_env_episode": 1,
+    "seed": 42,
+    "train_size": "20x5",
+    "update_per_validate": 100,
+    "use_pt_nodes": true,
+    "validation_set_size": 30,
+    "vloss_coef": 0.5
+  },
+  "hgt_hyperparams": {
+    "actor_channels": [
+      768,
+      512,
+      256,
+      128,
+      64,
+      32,
+      1
+    ],
+    "critic_channels": [
+      768,
+      512,
+      256,
+      128,
+      64,
+      32,
+      1
+    ],
+    "dp_lb_diff": {
+      "enabled": true
+    },
+    "dropout": 0.1,
+    "eps_clip": 0.2,
+    "gae_lambda": 0.98,
+    "gamma": 1.0,
+    "generator_type": "SD1",
+    "hidden_dim": 128,
+    "job_feature_dim": 4,
+    "k_epochs": 4,
+    "lowerbound_features": {
+      "enabled": true
+    },
+    "lr": 3e-05,
+    "machine_feature_dim": 6,
+    "max_grad_norm": 1.0,
+    "n_j": 20,
+    "n_m": 5,
+    "num_heads": 1,
+    "num_hgt_layers": 4,
+    "objective_weights": {
+      "makespan_weight": 1.0,
+      "twt_weight": 0.0
+    },
+    "op_feature_dim": 9,
+    "ploss_coef": 1.0,
+    "pt_feature_dim": 2,
+    "reproducibility": {
+      "cublas_workspace_config": null,
+      "cuda_available": true,
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "numpy_seed": 42,
+      "python_random_seed": 42,
+      "pythonhashseed": "42",
+      "seed": 42,
+      "torch_seed": 42,
+      "torch_version": "2.7.1+cu118"
+    },
+    "seed": 42,
+    "single_objective": true,
+    "use_dynamic_event_features": false,
+    "use_pt_nodes": true,
+    "vloss_coef": 0.5
+  },
+  "id": "appendix-sd1-20x5-s42"
+}

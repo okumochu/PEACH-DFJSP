@@ -1,0 +1,28 @@
+{
+  "scale_cl": true,
+  "initial_size": "10x5",
+  "training_size": "50x10",
+  "early_stopping_patience": 6,
+  "validation_interval": 20,
+  "maximum_updates": 20000,
+  "value_normalization": "popart",
+  "scale_growth_factor": 1.7,
+  "stage_minimum_updates": 20,
+  "stage_maximum_updates": 100000,
+  "stage_explained_variance": 0.6,
+  "num_envs": 4,
+  "seed": 42,
+  "device": "cuda:0",
+  "micro_batch_size": 128,
+  "stopping_rule": "readiness_patience",
+  "hidden_dim": 16,
+  "num_heads": 1,
+  "num_layers": 3,
+  "mlp_hidden_dims": [
+    128,
+    64,
+    32
+  ],
+  "lr": 0.0003,
+  "training_events": true
+}
